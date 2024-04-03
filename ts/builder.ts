@@ -16,6 +16,7 @@ const Carolina = PersonBuilder
 .setName("Carolina Magdiel")
 .setLastName("Moran")
 .setAge(22)
+.build()
 
 console.log(Carolina);
 
