@@ -1,4 +1,5 @@
 import { Person } from "../models/builderModels";
+import { Ticket } from "../models/stateModels";
 
 export interface IStrategy {
     login(user, password: string):boolean;
@@ -22,3 +23,8 @@ export interface IPersonBuilder {
     addHobby(hobby:string):IPersonBuilder;
     build():Person;
 };
+
+export interface IState {
+    next(ticket:Ticket):number|null;
+    add(ticket:Ticket, quantity:number):void;
+}
